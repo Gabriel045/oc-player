@@ -1,0 +1,18 @@
+{
+    "name": "acf/list-icon",
+    "title": "List Icon",
+    "description": "A custom List Icon block.",
+    "style": [
+        "file:../../dist/output.css"
+    ],
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "List Icon"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "list-icon.php"
+    },
+    "align": "full"
+}

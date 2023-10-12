@@ -1,0 +1,23 @@
+{
+    "name": "acf/caledar-events",
+    "title": "Calendar Events",
+    "description": "A custom Calendar Events block.",
+    "style": [
+        "file:../../dist/output.css"
+    ],
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+       "Calendar Events"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "caledar-events.php"
+    },
+    "align": "full"
+}
+
+
+
+
+
