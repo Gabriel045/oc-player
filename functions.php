@@ -69,3 +69,18 @@ if (function_exists('acf_add_options_page')) {
 
 //Register ACF blocks
 include_once('acf-blocks.php');
+
+
+add_filter('gform_field_validation_1_62', 'custom_validation', 10, 4);
+function custom_validation($result, $value, $form, $field)
+{
+
+    if ($result['is_valid'] && strlen($value) != 5) {
+        $result['is_valid'] = false;
+        $result['message'] = 'Please enter a valid Zip Code';
+    }
+
+    return $result;
+}
+
+

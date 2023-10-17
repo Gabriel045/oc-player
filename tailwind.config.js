@@ -4,7 +4,7 @@ module.exports = {
   theme: {
     extend: {
       screens: {
-        'tablet': "1094px",
+        'tablet': "1150px",
       },
       fontFamily: {
         'Monserrat': ['Monserrat','sans-serif']

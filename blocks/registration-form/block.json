@@ -1,0 +1,18 @@
+{
+    "name": "acf/registration-form",
+    "title": "Registration Form",
+    "description": "A custom Registration Form block.",
+    "style": [
+        "file:../../dist/output.css"
+    ],
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Form"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "registration-form.php"
+    },
+    "align": "full"
+}

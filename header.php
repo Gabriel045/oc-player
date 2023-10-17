@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>OC theme</title>
+  <title><?php echo get_bloginfo('name') ?> </title>
   <?php wp_head(); ?>
 </head>
 
@@ -15,19 +15,19 @@
   <header class="overflow-x-clip flex justify-center relative ">
     <section>
       <div class="w-full py-[10px]">
-        <p class="text-center text-[#552084] text-[12px] font-[500]"> Winter League Registration <a> Now Open! </a></p>
+        <a href="/registration/" class="text-center text-[#552084] text-[15px] font-[500]"> Winter League Registration Now Open! </a>
       </div>
     </section>
-    <div class="max-w-[1440px] px-[30px] lg:px-[100px]  tablet:px-[150px] w-full items-center flex absolute z-[999] top-[35px]">
-      <div class="w-[50%] lg:w-[15%] py-[40px]">
+    <div class="max-w-[1440px] px-[30px] lg:px-[100px]  tablet:px-[150px] w-full items-center flex absolute z-[999] top-[40px]">
+      <div class="w-[50%] lg:w-[10%] py-[40px]">
         <a href="<?php echo get_site_url() ?> "> <img class="h-[103px] w-auto relative z-50" src="<?php echo get_stylesheet_directory_uri() ?>/assets/images/logo.svg" alt=""></a>
       </div>
-      <div class="hidden lg:flex w-[65%]  justify-end">
+      <div class="hidden lg:flex w-[74%]  justify-end">
         <?php echo wp_nav_menu(array(
           'menu'   => 'Header menu',
         )); ?>
       </div>
-      <div class="w-1/2 lg:w-[20%] flex justify-end">
+      <div class="w-1/2 lg:w-[16%] flex justify-end">
         <span class="inline-block cursor-pointer menu-mobile">
           <div class="block lg:hidden" id="nav-icon4">
             <span></span>
@@ -35,7 +35,7 @@
             <span></span>
           </div>
         </span>
-        <a href="<?php esc_url(the_field('header', 'option'))  ?>" target="_blank" class="button_hover hidden lg:inline-block bg-transparent text-[#FFF] text-[22px] font-[600] rounded-[5px]  border-[2px] border-[#FFF] px-[20px] py-[10px]">Sign Up</a>
+        <a href="<?php esc_url(the_field('header', 'option'))  ?>" class="button_hover hidden lg:inline-block bg-transparent text-[#FFF] text-[20px] font-[600] rounded-[5px]  border-[2px] border-[#FFF] px-[20px] py-[10px]">Sign Up</a>
       </div>
     </div>
     <div class="bg-primary absolute z-[60] h-[100vh] w-full menu-mobile-container bloch lg:hidden">

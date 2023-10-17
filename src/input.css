@@ -20,6 +20,18 @@
     font-weight: 500;
 }
 
+@font-face {
+    font-family: Montserrat;
+    src: url('../assets/fonts/Monserrat/Montserrat-Light.ttf');
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: Inter;
+    src: url('../assets/fonts/Inter/Inter-Regular.ttf');
+    font-weight: 400;
+}
+
 :root {
     --primary: #552084;
 }
@@ -72,7 +84,7 @@ h3 {
     margin-top: 20px;
     color: #FFF;
     font-family: Montserrat;
-    font-size: 52px;
+    font-size: 44px;
     font-style: normal;
     font-weight: 500;
     line-height: normal;
@@ -320,7 +332,19 @@ h3 {
     color: #FFF;
 }
 
-@media screen and (max-width: 1094px) {
+sub,
+sup {
+    font-size: 60%;
+}
+
+@media (min-width: 1024px) and (max-width: 1200px) {
+    #menu-header-menu {
+        gap: 20px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 1150px) {
     .block_content {
         padding: 150px 100px;
     }
@@ -336,7 +360,7 @@ h3 {
     }
 
     h3 {
-        font-size: 27px;
+        font-size: 24px;
     }
 
     .block_content {
@@ -373,4 +397,528 @@ h3 {
         text-align: center;
     }
 
+    /* Contact Form */
+    #contact_form form {
+        width: 100% !important;
+        padding: 30px !important;
+    }
+
+    #gform_confirmation_message_1 {
+        width: 100 !important ;
+    }
+
+    #gform_confirmation_message_1 h2 {
+        font-size: 25px !important;
+    }
+
+}
+
+.slick-slide {
+    position: relative;
+}
+
+/*.slick-slide::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--primary);
+    opacity: 0.8;
+}*/
+
+
+/* form */
+
+#gform_confirmation_message_1 {
+    margin: auto;
+    background: #F4F4F4;
+    width: 600px;
+    padding: 50px;
+}
+
+#gform_confirmation_message_1 h2{
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield.total-price input {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #552084;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 0;
+}
+
+
+.registration-form-wrap {
+    padding: 150px 15px;
+}
+
+.registration-form .gform_wrapper .gform_heading {
+    display: none;
+}
+
+.registration-form .gform_wrapper .gform_fields {
+    grid-column-gap: 39px;
+    grid-row-gap: 39px;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield .gfield_label,
+.registration-form .gform_wrapper .gform_fields .gfield .gfield_label+.gfield_description,
+.registration-form .gform-field-label {
+    font-size: 16px !important;
+    line-height: 1.5 !important;
+    margin: 0 0 6px !important;
+    color: #552084 !important;
+    font-weight: 400 !important;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield .gfield_label span.gfield_required {
+    display: none;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield input[type="text"],
+.registration-form .gform_wrapper .gform_fields .gfield input[type="email"],
+.registration-form .gform_wrapper .gform_fields .gfield input[type="tel"],
+.registration-form .gform_wrapper .gform_fields .gfield input[type="number"],
+.registration-form .gform_wrapper .gform_fields .gfield select,
+.registration-form .gform_wrapper .gform_fields .gfield textarea {
+    font-size: 14px;
+    line-height: 1.71;
+    border-radius: 8px;
+    border: 1px solid #D9D0DD;
+    background-color: #FFF;
+    padding: 10px 14px;
+    height: 44px;
+    color: rgb(85 32 132 / 60%);
+    outline: none !important;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05) !important;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield input[type="text"]::placeholder,
+.registration-form .gform_wrapper .gform_fields .gfield input[type="email"]::placeholder,
+.registration-form .gform_wrapper .gform_fields .gfield input[type="tel"]::placeholder,
+.registration-form .gform_wrapper .gform_fields .gfield select::placeholder,
+.registration-form .gform_wrapper .gform_fields .gfield textarea::placeholder {
+    color: rgb(85 32 132 / 60%);
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield textarea {
+    height: 157px;
+    min-block-size: unset !important;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield select {
+    background-image: url(https://oc.alkali.cloud/wp-content/uploads/2023/10/select-arrow.svg);
+    background-size: 11px;
+    background-position: calc(100% - 14px) 50%;
+    background-repeat: no-repeat;
+}
+
+div.registration-form .gform_wrapper .gform_page_footer input {
+    width: 100% !important;
+    display: inline-block !important;
+    max-width: 100% !important;
+    border-radius: 8px !important;
+    border: none !important;
+    color: #FFF !important;
+    background: #552084 !important;
+    padding: 15px !important;
+    height: 52px !important;
+    font-size: 18px !important;
+    font-weight: 700 !important;
+    line-height: 1.22 !important;
+    letter-spacing: -0.36px !important;
+    transition: all ease .3s !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+
+div.registration-form .gform_wrapper .gform_page_footer input:hover {
+    background: #FDBA21 !important;
+    color: #552084 !important;
+}
+
+.registration-form .gform_wrapper .gform_page_footer {
+    margin: 79px 0 0;
+    position: relative;
+}
+
+.registration-form .gform_wrapper .gform_page_footer .gform-loader {
+    position: absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 9;
+}
+
+.registration-form .gform_wrapper .gform_validation_errors {
+    display: none;
+}
+
+.registration-form .gform_wrapper .gfield_validation_message,
+.registration-form .gform_wrapper .instruction.validation_message {
+    color: red;
+    font-size: 13px;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield .ginput_container_radio .gfield_radio .gchoice label {
+    font-size: 14px;
+    line-height: 1.42;
+    font-weight: 500;
+    color: #552084;
+    font-family: Inter;
+    margin-left: 8px;
+}
+
+
+.registration-form .gform_wrapper .gform_fields .gfield .ginput_container_radio .gfield_radio .gchoice {
+    display: inline-flex;
+    align-items: center;
+    min-height: 44px;
+    cursor: pointer;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield .ginput_container_radio .gfield_radio {
+    flex-direction: row;
+    flex-wrap: wrap;
+    row-gap: 6px;
+    column-gap: 41px;
+    min-height: 44px;
+    max-width: 550px;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield .ginput_container_radio .gfield_radio .gchoice input {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    border: 1px solid #7F56D9;
+    background: transparent;
+    outline: none !important;
+    box-shadow: none !important;
+    cursor: pointer;
+    position: relative;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield .ginput_container_radio .gfield_radio .gchoice input::before {
+    background: #7F56D9 !important;
+    width: 7px;
+    height: 7px;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield .ginput_container_radio .gfield_radio .gchoice input:checked {
+    background: #F4EBFF;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield .ginput_container_radio .gfield_radio .gchoice input {
+    margin-right: 10px;
+    margin-top: -5px;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield.gfield--type-date .gform-grid-row {
+    margin: 0 -3px;
+    width: auto;
+    flex-flow: row;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield.gfield--type-date .gform-grid-row .ginput_container_date {
+    padding: 0 3px;
+    width: 89px;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield.gfield--type-date .gform-grid-row .gfield_date_dropdown_day {
+    width: 72px;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield.title-box p {
+    margin: 39px 0 0;
+    font-size: 16px;
+    line-height: 1.5;
+    color: #552084;
+    font-weight: 400;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield .ginput_container_consent label {
+    font-size: 16px;
+    line-height: 1.5;
+    color: #552084;
+    font-weight: 400;
+    margin-left: 12px;
+    width: calc(100% - 32px);
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield .ginput_container_consent input {
+    border-radius: 6px;
+    border: 1px solid #D9D0DD;
+    background: #FFF;
+    box-shadow: none !important;
+    outline: none !important;
+    margin: 2px 10px 0 0;
+    width: 20px;
+    height: 20px;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield .ginput_container_consent {
+    cursor: pointer;
+    display: flex !important;
+    flex-wrap: wrap;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield .ginput_container_consent input::before {
+    color: #552084 !important;
+}
+
+.registration-form .gform_wrapper #gform_page_1_7 .gform_page_footer,
+.registration-form .gform_wrapper #gform_page_1_8 .gform_page_footer {
+    margin: 20px 0 0;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield .ginput_container_consent label .gfield_required {
+    display: none;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield .ginput_container_consent label a {
+    text-decoration-line: underline;
+}
+
+.registration-form .gform_wrapper .gform_confirmation_message {
+    color: green;
+    text-align: center;
+    background: rgb(0 128 0 / 7%);
+    padding: 40px 20px;
+    border-radius: 9px;
+}
+
+.registration-form .gform_wrapper .gform_page {
+    display: block !important;
+}
+
+.registration-form .gform_wrapper .gform_page {
+    border-radius: 10px;
+    background: #F4F4F4;
+    padding: 80px;
+    max-width: 777px;
+    margin: 0 auto;
+    margin-bottom: 100px;
+}
+
+.registration-form .gform_wrapper .gform_page:last-child {
+    margin-bottom: 0;
+}
+
+.registration-form .gform_wrapper .gform_page_footer .gform_previous_button {
+    display: none !important;
+}
+
+.registration-form .gform_wrapper .gf_page_steps {
+    display: none;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield.total-price input {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    color: #552084;
+    font-size: 22px;
+    font-weight: 700;
+    padding: 0;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield.price-field {
+    display: flex;
+    align-items: center;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield.price-field label {
+    margin: 0;
+    gap: 0;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield.price-field input {
+    background: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0 !important;
+    color: #552084;
+    font-weight: 600;
+    margin-left: 10px;
+    height: auto !important;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield.price-field .ginput_product_price_wrapper label {
+    display: none;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield.price-field label::after {
+    content: ':';
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield.price-field.shorts-price {
+    margin-bottom: -39px;
+}
+
+.registration-form .gform_wrapper .partial_entry_warning {
+    display: none;
+}
+
+.registration-form .gform_wrapper .gform_fields .gfield.title-box h2 {
+    line-height: 1.2;
+}
+
+
+.registration-form #gform_fields_1_7 {
+    grid-row-gap: 10px;
+}
+
+.registration-form #gform_fields_1_7 h2 {
+    margin-bottom: 20px;
+}
+
+@media only screen and (max-width: 1199px) {
+    .registration-form-wrap {
+        padding: 100px 15px;
+    }
+
+    .registration-form .gform_wrapper .gform_page {
+        margin-bottom: 80px;
+    }
+}
+
+@media only screen and (max-width: 991px) {
+    .registration-form-wrap {
+        padding: 70px 15px;
+    }
+
+    .registration-form .gform_wrapper .gform_page {
+        margin-bottom: 70px;
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .registration-form-wrap {
+        padding: 55px 15px;
+    }
+
+    .registration-form .gform_wrapper .gform_page {
+        margin-bottom: 40px;
+    }
+
+    .registration-form .gform_wrapper .gform_page {
+        padding: 40px 20px;
+    }
+
+    .registration-form .gform_wrapper .gform_fields {
+        grid-template-columns: unset;
+        grid-column-gap: 24px;
+        grid-row-gap: 24px;
+    }
+
+    .registration-form .gform_wrapper .gform_fields .gfield.title-box p {
+        margin: 10px 0 0;
+    }
+
+    .registration-form .gform_wrapper .gform_fields .gfield.title-box h2 {
+        font-size: 26px;
+    }
+}
+
+@media only screen and (max-width: 340px) {
+    .registration-form .gform_wrapper .gform_fields .gfield .ginput_container_radio .gfield_radio .gchoice {
+        width: 100%;
+    }
+
+    .registration-form .gform_wrapper .gform_fields .gfield.price-field {
+        flex-wrap: wrap;
+    }
+}
+
+/* Contact Form */
+#contact_form form {
+    width: 780px;
+    background-color: white;
+    border-radius: 10px;
+    padding: 80px;
+}
+
+#contact_form input[type="submit"] {
+    width: 100% !important;
+    color: white !important;
+    background-color: var(--primary) !important;
+    border-radius: 8px !important;
+    padding-bottom: 15px !important;
+    padding-top: 15px !important;
+    margin-top: 50px !important;
+}
+
+.p-Input input {
+    font-size: 14px;
+    line-height: 1.71;
+    border-radius: 8px;
+    border: 1px solid #D9D0DD;
+    background-color: #FFF;
+    padding: 10px 14px;
+    color: #552084;
+    outline: none !important;
+    box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05)
+}
+
+
+/* terms & condition */
+
+#blog_content h2 {
+    font-size: 36px !important;
+    width: 100%;
+    display: inline-block;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: var(--primary);
+    position: relative;
+    z-index: 50;
+}
+
+#blog_content h3 {
+    font-size: 30px !important;
+    font-weight: 600;
+    width: 100%;
+    display: inline-block;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: var(--primary);
+    position: relative;
+    z-index: 50;
+}
+
+#blog_content h4 {
+    font-size: 25px !important;
+    font-weight: 600;
+    width: 100%;
+    display: inline-block;
+    font-weight: 600;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: var(--primary);
+    position: relative;
+    z-index: 50;
+}
+
+
+#blog_content p,
+#blog_content ul li {
+    color: #55208499;
+    margin: 20px 0px;
+    width: 100%;
+    font-size: 16px !important;
+}
+
+#blog_content ul {
+    list-style: disc;
+    margin-left: 25px;
 }

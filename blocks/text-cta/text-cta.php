@@ -35,14 +35,22 @@ $cta                = get_field('cta');
 
 ?>
 
-<section class="" style="background-image:url('<?php echo $background ?>'); background-repeat:no-repeat; background-size:cover;">
-    <div class="block_content">
+<section class="" style="background-image:url('<?php echo $background ?>'); background-repeat:no-repeat; background-size:cover; background-position:center;">
+    <div class="block_content" style="<?php echo (!empty($background)) ? '' : 'padding-top:0px' ?>">
         <div class="mb-[100px] last:mb-0 direction flex flex-col items-center">
-            <div class="white text-center"> <?php echo $title ?> </div>
-            <p class="text-[#ffffff99] text-[16px] lg:text-[18px] font-[500] my-[30px] text-center lg:w-[70%]"><?php echo $paragraph ?> </p>
-            <div class="flex w-full lg:w-fit text-center">
-                <?php echo (!empty($cta['url'])) ? '<a href="' . $cta['url'] . ' " class="orange_button w-full lg:w-fit">' . $cta['text'] . '</a>' : '' ?>
-            </div>
+            <?php if (!empty($background)) : ?>
+                <div class="white text-center"> <?php echo $title ?> </div>
+                <p class="text-[#ffffff99] text-[16px] lg:text-[18px] font-[500] my-[30px] text-center lg:w-[70%]"><?php echo $paragraph ?> </p>
+                <div class="flex w-full lg:w-fit text-center">
+                    <?php echo (!empty($cta['url'])) ? '<a href="' . $cta['url'] . ' " class="orange_button w-full lg:w-fit">' . $cta['text'] . '</a>' : '' ?>
+                </div>
+            <?php else : ?>
+                <div class="text-primary text-center"> <?php echo $title ?> </div>
+                <p class="text-[#55208499] text-[16px] lg:text-[18px] font-[500] my-[30px] text-center lg:w-[70%]"><?php echo $paragraph ?> </p>
+                <div class="flex w-full lg:w-fit text-center">
+                    <?php echo (!empty($cta['url'])) ? '<a href="' . $cta['url'] . ' " class="purple_button w-full lg:w-fit">' . $cta['text'] . '</a>' : '' ?>
+                </div>
+            <?php endif ?>
         </div>
     </div>
 </section>

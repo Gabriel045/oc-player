@@ -30,6 +30,7 @@ if (!empty($block['align'])) {
 // Load values and assign defaults.
 $layout           = get_field('layout');
 $title            = get_field('title');
+$text             = get_field('text');
 $cards            = get_field('card');
 
 
@@ -41,20 +42,21 @@ $cards            = get_field('card');
             <div class="mb-[60px] lg:mb-[100px] last:mb-0 direction flex flex-col items-center relative z-50">
                 <div class="relative z-50 blur_custom">
                     <h2 class="relative z-50 " style="margin-top:0px"> <?php echo $title ?> </h2>
+                    <p class="text-[18px] font-[500] text-[#55208499] text-center mt-[30px]"> <?php echo $text ?> </p>
                 </div>
             </div>
         <?php endif ?>
-        <div class="flex flex-row flex-wrap gap-y-[80px]">
+        <div class="flex flex-row flex-wrap gap-y-[50px] lg:gap-y-[80px]">
             <?php foreach ($cards as $key => $card) : ?>
                 <div class="flex three-col-card w-full lg:w-[33.3%] lg:px-[40px] last:mb-0">
-                    <div class="p-[20px] rounded-[10px] bg-[#f7f4f9] w-full">
+                    <div class="p-[20px] rounded-[10px] bg-primary  border-[3px] border-secondary w-full" style="box-shadow: 4px 4px 5px 1px rgba(253,186,33,0.3);">
                         <?php echo ($layout == "require") ? '<span class="text-[8px] text-white font-[600] bg-[#06385F] p-[5px] rounded-[3px]">REQUIRED</span>' : '' ?>
-                        <p class=" text-[18px] font-[500] text-[#552084] leading-[27px]"><?php echo $card['paragraph'] ?></p>
+                        <p class=" text-[18px] font-[500] text-white leading-[27px]"><?php echo $card['paragraph'] ?></p>
                         <div class="mt-[30px]">
                             <div>
-                                <span class="text-[#55208499] text-[18px] font-[500]"> <?php echo $card["month"] ?> </span>
-                                <p class="inline ml-[50px] text-primary text-[14px] font-[500]">Location: <span> <?php echo $card["location"] ?> </span> </p>
-                                <div class="text-[18px] font-[700] text-primary mt-[15px]">
+                                <span class="text-white text-[18px] font-[500]"> <?php echo $card["month"] ?> </span>
+                                <p class="inline ml-[50px] text-white text-[14px] font-[500]">Location: <span> <?php echo $card["location"] ?> </span> </p>
+                                <div class="text-[18px] font-[500] text-white mt-[15px]">
                                     <span> <?php echo $card["start_day"] ?> </span>
                                     /
                                     <span> <?php echo $card["end_day"] ?> </pre>

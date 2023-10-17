@@ -42,7 +42,7 @@ $items           = get_field('items');
                 <h2 class="mb-[30px] lg:mb-[46px] z-50 relative text-start"><?php echo $title ?></h2>
                 <p class="mb-[30px] text-[18px] text-[#55208499] font-[500] text-start  "><?php echo $text ?></p>
                 <div class="relative blur_custom w-full lg:w-fit text-center">
-                    <?php echo (!empty($cta["url"])) ? '<a target="_blank" href="' . $cta["url"] . '" class="purple_button inline-block relative z-50 w-full lg:w-fit">' . $cta['text'] . '</a>' : '' ?>
+                    <?php echo (!empty($cta["url"])) ? '<a href="' . $cta["url"] . '" class="purple_button inline-block relative z-50 w-full lg:w-fit">' . $cta['text'] . '</a>' : '' ?>
                 </div>
             </div>
             <div class="bf lg:w-[55%]">

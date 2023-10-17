@@ -28,12 +28,14 @@ if (!empty($block['align'])) {
 }
 
 // Load values and assign defaults.
+$height         = get_field('height');
 $title          = get_field('title') ?: 'Your Title here...';
+$location       = get_field('location');
 $text           = get_field('paragraph');
 $slider         = get_field('slider');
 $button         = get_field('button');
 
-if (!empty($button['url'])) { ?>
+if ($height == "Full") { ?>
     <script>
         jQuery('.slick-list').ready(() => {
             setTimeout(() => {
@@ -55,8 +57,13 @@ if (!empty($button['url'])) { ?>
 
 ?>
 
-<section class="relative <?php echo (!empty($button['url'])) ? 'lg:h-[1024px] h-[700px]'  : 'lg:h-[524px] h-[350px]' ?>">
-    <div class="absolute z-50  max-w-[1440px] w-full px-[30px] lg:px-[100px]  tablet:px-[150px] <?php echo (!empty($button['url'])) ? 'lg:top-[35%] top-[30%] ' : 'lg:top-[50%] top-[55%]' ?>">
+<section class="relative <?php echo ($height == "Full") ? 'lg:h-[1024px] h-[700px]'  : 'lg:h-[524px] h-[350px]' ?>">
+    <div class="absolute z-50  max-w-[1440px] w-full px-[30px] lg:px-[100px]  tablet:px-[150px] <?php echo (!empty($button['url'])) ? 'top-[35%]' : 'lg:top-[50%] top-[55%]' ?>">
+        <?php if (!empty($location)) : ?>
+            <div class="mb-[40px]">
+                <span class="bg-[#ffffff29] text-secondary text-[16px] font-[600] py-[5px] px-[10px] rounded-[5px]"><?php echo $location ?></span>
+            </div>
+        <?php endif ?>
         <div> <?php echo $title ?> </div>
         <p class="lg:w-[72%] my-[40px] text-[18px] lg:text-[22px] font-[500] text-[#ffffff99]"> <?php echo $text ?> </p>
         <?php if (!empty($button['url'])) : ?>
@@ -65,10 +72,10 @@ if (!empty($button['url'])) { ?>
             </div>
         <?php endif ?>
     </div>
-    <div class="multiple-items  <?php echo (!empty($button['url'])) ? 'lg:h-[1024px] h-[700px]'  : 'lg:h-[524px]  h-[350px]' ?>  w-full">
+    <div class="multiple-items  <?php echo ($height == "Full") ? 'lg:h-[1024px] h-[700px]'  : 'lg:h-[524px]  h-[350px]' ?>  w-full">
         <?php foreach ($slider as $key => $item) : ?>
             <diV class="w-full slick-slide">
-                <img class="w-full <?php echo (!empty($button['url'])) ? 'lg:h-[1024px] h-[700px]'  : 'lg:h-[524px]  h-[350px]' ?> object-cover" src="<?php echo $item["images"] ?>" alt="">
+                <img class="w-full <?php echo ($height == "Full") ? 'lg:h-[1024px] h-[700px]'  : 'lg:h-[524px]  h-[350px]' ?> object-cover" src="<?php echo $item["images"] ?>" alt="">
             </diV>
         <?php endforeach ?>
     </div>

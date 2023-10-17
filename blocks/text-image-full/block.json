@@ -1,0 +1,18 @@
+{
+    "name": "acf/text-image-full",
+    "title": "Text Image Full",
+    "description": "A custom Text Image Full block.",
+    "style": [
+        "file:../../dist/output.css"
+    ],
+    "category": "custom",
+    "icon": "block-default",
+    "keywords": [
+        "Text Image Full"
+    ],
+    "acf": {
+        "mode": "preview",
+        "renderTemplate": "text-image-full.php"
+    },
+    "align": "full"
+}
